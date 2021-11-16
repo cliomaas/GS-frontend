@@ -11,8 +11,27 @@ class ListaReclamacoes extends Component {
         }
     }
 
+    // const randomId = 128398723
+    // const url = `/post/${randomId}`;
+    // getPost(url)
+    // export const getPost = (funcParamURL) => {
+    //     return axios.get(`${funcParamURL}`);
+    // }
+    // const randomId = 128398723
+    // const url = `/post/${randomId}`;
+    // getPost(url)
+    // export const makeRequest = (funcParamURL) => {
+    //     const newUrl = funcParamURL;
+    //     return axios.get(newUrl);
+    // }
+
+
+
     componentDidMount() {
-        axios.get('http://localhost:8080/api/usuarios/{id}/reclamacoes')
+        let id = 2;
+        let url = `http://localhost:8080/api/usuarios/${id}/reclamacoes`;
+
+        axios.get(url)
             .then(response => {
                 this.setState({
                     posts: response.data
@@ -21,8 +40,11 @@ class ListaReclamacoes extends Component {
             })
     }
     componentDidUpdate(prevProps, prevState) {
+        let id = 2;
+        let url = `http://localhost:8080/api/usuarios/${id}/reclamacoes`;
+
         if (prevState.posts !== this.state.posts) {
-            axios.get('http://localhost:8080/usuarios/{id}/reclamacoes')
+            axios.get(url)
                 .then(response => {
                     this.setState({
                         posts: response.data
@@ -40,32 +62,26 @@ class ListaReclamacoes extends Component {
                         <thead>
                             <tr>
                                 <th>Data</th>
-                                <th>Vendedor</th>
-                                <th>Clientes visitados</th>
-                                <th>Negócios fechados</th>
-                                <th>Valor</th>
+                                <th>Categoria</th>
+                                <th>CEP</th>
+                                <th>Comentário</th>
                             </tr>
                         </thead>
                         <tbody>
                             {posts.map(post => (
                                 <tr key={post.id}>
                                     <td>{post.data}</td>
-                                    <td>{post.nome}</td>
-
+                                    <td>{post.categoria}</td>
+                                    <td>{post.cep}</td>
+                                    <td>{post.obs}</td>
                                 </tr>
                             ))}
                         </tbody>
                     </table>
                 </div>
-                <div>
-                    <h1>Lista de clientes:</h1>
-                    {
-                        posts.map(post => <div key={post.codigo}><p>Cliente número <b>{post.codigo}</b>: Nome: <b><span style={{ textTransform: 'capitalize' }}>{post.nome}</span></b> Idade: <b>{post.idade}</b></p></div>)
-                    }
-                </div>
-
             </>
         )
     }
 }
 
+export default ListaReclamacoes;

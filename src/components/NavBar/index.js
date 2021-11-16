@@ -1,5 +1,4 @@
 import React from "react";
-import "./navbar.css"
 import { Navbar, Container, Nav, NavDropdown, DropdownButton, Dropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/img/logo.svg"
@@ -21,7 +20,7 @@ export default function NavBar() {
                             <NavDropdown.Item as={Link} to="/registro-pj">Sou empresa</NavDropdown.Item>
                         </NavDropdown>
                         <DropdownButton id="dropdown-basic-button" title="Login">
-                            <Dropdown.Item href="#/action-1">Cidadão</Dropdown.Item>
+                            <Dropdown.Item as={Link} to="/login-pf">Cidadão</Dropdown.Item>
                             <Dropdown.Item href="#/action-2">Empresa parceira</Dropdown.Item>
                         </DropdownButton>
                     </Nav>

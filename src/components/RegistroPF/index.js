@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Container, Form, FormControl, FormGroup, FormLabel, FormSelect, Button, Row, Col } from "react-bootstrap";
 import Menina from "../../assets/img/menina.png"
-import "./registropf.css"
 
 class RegistroPF extends Component {
     constructor(props) {
@@ -22,7 +21,7 @@ class RegistroPF extends Component {
     confSenha() {
         var senha = document.getElementById("senha").value
         var confSenha = document.getElementById("confSenha").value
-        if (senha != confSenha) {
+        if (senha !== confSenha) {
             alert('Senhas não coincidem! Por favor verifique');
             return false;
         }
@@ -41,7 +40,7 @@ class RegistroPF extends Component {
             .then(response => {
                 console.log(response)
             })
-        this.props.history.push('/home')
+        window.location.href = "http://localhost:3000/"
     }
 
     render() {

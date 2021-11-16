@@ -3,7 +3,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import RegistroPessoaFisica from "./pages/RegistroPF";
 import RegistroPessoaJuridica from "./pages/RegistroPJ";
-import LoginPage from "./pages/Login";
+import LoginPagePF from "./pages/Login/PF";
+import ListaReclamacoes from "./components/ListaReclamacoes";
 
 const RoutesSchema = () => {
     return (
@@ -12,7 +13,8 @@ const RoutesSchema = () => {
                 <Route element={<Home />} path="/" exact />
                 <Route element={<RegistroPessoaFisica />} path="/registro-pf" />
                 <Route element={<RegistroPessoaJuridica />} path="/registro-pj" />
-                <Route element={<LoginPage />} path="/login" />
+                <Route element={<LoginPagePF />} path="/login-pf" />
+                <Route element={<ListaReclamacoes />} path="/lista" />
             </Routes>
         </BrowserRouter>
     );

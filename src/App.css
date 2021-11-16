@@ -20,6 +20,10 @@
 
 }
 
+.form{ 
+  padding:0 23%;
+}
+
 @media (min-width: 1400px){
   .logo{
     width: 10%;
