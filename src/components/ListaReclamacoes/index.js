@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { Form, FormControl, FormLabel, Button } from "react-bootstrap";
+import { Form, FormControl, FormLabel, Button, Container, Table } from "react-bootstrap";
 
 class ListaReclamacoes extends Component {
 
@@ -59,40 +59,42 @@ class ListaReclamacoes extends Component {
         const { posts } = this.state
         return (
             <>
-                <div>
-                    <Form>
-                        <FormLabel htmlFor="id">Digite o id do usuário para visualizar as reclamações</FormLabel>
-                        <FormControl type="number" id="id" name="id" ref={this.myRef} />
-                        <Button className="my-2" onClick={this.handleSubmit}>Buscar</Button>
-                    </Form>
-                </div>
-                <div className="table-responsive">
-                    <table className="table table-sm">
-                        <thead>
-                            <tr>
-                                <th>Id</th>
-                                <th>Data</th>
-                                <th>Categoria</th>
-                                <th>CEP</th>
-                                <th>Comentário</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {posts.map(post => (
-                                <tr key={post.id}>
-                                    <td>{post.id}</td>
-                                    <td>{post.data}</td>
-                                    <td>{post.categoria}</td>
-                                    <td>{post.cep}</td>
-                                    <td>{post.obs}</td>
-                                    <td><Button onClick={() => this.deletarReclamacao(post.id)}>Deletar</Button>
-                                    </td>
+                <Container className="containerLista my-5">
+                    <div>
+                        <Form>
+                            <FormLabel htmlFor="id">Digite o id do usuário para visualizar as reclamações</FormLabel>
+                            <FormControl type="number" id="id" name="id" ref={this.myRef} />
+                            <Button className="my-2" onClick={this.handleSubmit}>Buscar</Button>
+                        </Form>
+                    </div>
+                    <div className="table-responsive">
+                        <Table responsive hover>
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Data</th>
+                                    <th>Categoria</th>
+                                    <th>CEP</th>
+                                    <th>Comentário</th>
+                                    <th></th>
                                 </tr>
-                            ))}
-                        </tbody>
-                    </table>
-                </div>
+                            </thead>
+                            <tbody>
+                                {posts.map(post => (
+                                    <tr key={post.id}>
+                                        <td>{post.id}</td>
+                                        <td>{post.data}</td>
+                                        <td>{post.categoria}</td>
+                                        <td>{post.cep}</td>
+                                        <td>{post.obs}</td>
+                                        <td><Button onClick={() => this.deletarReclamacao(post.id)}>Deletar</Button>
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </Table>
+                    </div>
+                </Container>
             </>
         )
     }

@@ -4,7 +4,7 @@ import { Container, Form, FormControl, FormLabel, Button } from "react-bootstrap
 class LoginPF extends Component {
     render() {
         return (
-            <Container className="my-5">
+            <Container className="my-5 containerLogin">
                 <Form className="form pe-5">
                     <FormLabel htmlFor="email" >Email: </FormLabel>
                     <FormControl type="email" name="email" />

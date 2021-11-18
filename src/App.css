@@ -1,11 +1,15 @@
 html{
   height: 100vh;
+  width: 100vw;
 }
 
 .logo{
   width: 35%;
 }
 
+.linkNav{
+  width: 80vw;
+}
 
 .navbar-principal{
   flex-wrap: nowrap;
@@ -19,13 +23,24 @@ html{
   align-items: center;
 }
 
-.menina, .menino{
+.menina, .menino, .pessoasPredio{
     width: 80%;
 
+}
+.containerLista, .containerLoginReclamacao{
+  min-height: 70vh;
+}
+
+.btn-primary{
+  background-color: #397d9c !important;
 }
 
 .form{ 
   padding:0 23%;
+}
+
+.containerLogin{
+  height: 64vh;
 }
 
 footer{
@@ -42,17 +57,27 @@ footer{
   height: 100%;
 }
 
+
 .header{
   background-image: url(./assets/img/paisagem.png);
   height: 62vh;
   background-position-y: 82%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 }
 
 @media (min-width: 1400px){
-  .logo{
-    width: 10%;
-  }
   .menina{
    height: 70%;
   }
+  .linkNav{
+    width: 30vw;
+  }
+  .header{
+    display: block;
+  }
+
+
 }

@@ -8,7 +8,9 @@ export default function NavBar() {
     return (
         <Navbar bg="light" expand="lg">
             <Container>
-                <img className="logo" src={Logo} alt="logo"></img>
+                <Link className="linkNav" to="/">
+                    <img className="logo" src={Logo} alt="logo"></img>
+                </Link>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav" className="flex-grow-0">
                     <Nav className="me-auto">
