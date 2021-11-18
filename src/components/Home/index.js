@@ -1,4 +1,3 @@
-import Paisagem from "../../assets/img/paisagem.png"
 import { Button, DropdownButton, Dropdown, Row, Col } from "react-bootstrap"
 import { Link } from "react-router-dom";
 import Grupo from "../../assets/img/grupo.png"

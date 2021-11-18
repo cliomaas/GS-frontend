@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Container, Form, FormControl, FormGroup, FormLabel, FormSelect, Button, Row, Col } from "react-bootstrap";
 import Menina from "../../assets/img/menina.png"
-import { BASE_URL } from "../../utils/requests";
 
 class RegistroPF extends Component {
     constructor(props) {
@@ -37,7 +36,7 @@ class RegistroPF extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        axios.post(`${BASE_URL}/api/usuarios`, this.state)
+        axios.post('http://localhost:8080/api/usuarios', this.state)
             .then(response => {
                 console.log(response)
             })
