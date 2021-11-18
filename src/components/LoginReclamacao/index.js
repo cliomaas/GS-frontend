@@ -1,4 +1,3 @@
-import { render } from "@testing-library/react"
 import { Container, Button, Row, Col } from "react-bootstrap"
 import { Link } from "react-router-dom";
 import PessoasPredio from "../../assets/img/pessoaspredio.png"
