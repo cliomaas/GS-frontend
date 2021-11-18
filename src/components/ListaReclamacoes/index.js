@@ -11,13 +11,26 @@ class ListaReclamacoes extends Component {
         this.state = {
             posts: [],
         }
+
+        this.deletarReclamacao = this.deletarReclamacao.bind(this);
     }
 
-    // updateId(e) {
-    //     this.setState({
-    //         id: e.target.value
-    //     })
-    // }
+
+    deletar(idrecl) {
+        return axios.post("http://localhost:8080/api/reclamacoes/" + idrecl)
+    }
+
+    deletarReclamacao(id) {
+        this.deletar(id).then(
+            response => {
+                this.setState({ posts: this.state.posts.filter(post => post.id !== id) });
+            }
+        );
+    }
+
+    handleClick = () => {
+
+    }
 
     handleSubmit = () => {
         this.componentDidMount();
@@ -43,7 +56,8 @@ class ListaReclamacoes extends Component {
                 <div>
                     <Form>
                         <FormLabel htmlFor="id">Digite o id do usuário para visualizar as reclamações</FormLabel>
-                        <FormControl type="number" id="id" name="id" ref={this.myRef} onBlur={this.handleSubmit} />
+                        <FormControl type="number" id="id" name="id" ref={this.myRef} />
+                        <Button className="my-2" onClick={this.handleSubmit}>Buscar</Button>
                     </Form>
                 </div>
                 <div className="table-responsive">
@@ -64,7 +78,7 @@ class ListaReclamacoes extends Component {
                                     <td>{post.categoria}</td>
                                     <td>{post.cep}</td>
                                     <td>{post.obs}</td>
-                                    <td><Button onClick={this.handleClick()}>Deletar</Button></td>
+                                    <td><Button onClick={() => this.deletarReclamacao(post.id)}>Deletar</Button></td>
                                 </tr>
                             ))}
                         </tbody>
