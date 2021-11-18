@@ -13,8 +13,14 @@ class ListaReclamacoes extends Component {
         }
 
         this.deletarReclamacao = this.deletarReclamacao.bind(this);
+        this.editReclamacao = this.editReclamacao.bind(this);
     }
 
+
+
+    editReclamacao(id) {
+        window.location.href = `/add-employee/${id}`;
+    }
 
     deletar(idrecl) {
         return axios.post("http://localhost:8080/api/reclamacoes/" + idrecl)
@@ -64,6 +70,7 @@ class ListaReclamacoes extends Component {
                     <table className="table table-sm">
                         <thead>
                             <tr>
+                                <th>Id</th>
                                 <th>Data</th>
                                 <th>Categoria</th>
                                 <th>CEP</th>
@@ -74,11 +81,13 @@ class ListaReclamacoes extends Component {
                         <tbody>
                             {posts.map(post => (
                                 <tr key={post.id}>
+                                    <td>{post.id}</td>
                                     <td>{post.data}</td>
                                     <td>{post.categoria}</td>
                                     <td>{post.cep}</td>
                                     <td>{post.obs}</td>
-                                    <td><Button onClick={() => this.deletarReclamacao(post.id)}>Deletar</Button></td>
+                                    <td><Button onClick={() => this.deletarReclamacao(post.id)}>Deletar</Button>
+                                    </td>
                                 </tr>
                             ))}
                         </tbody>
