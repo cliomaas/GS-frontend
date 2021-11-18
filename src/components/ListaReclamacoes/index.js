@@ -1,36 +1,31 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { Form, FormControl, FormLabel, Button } from "react-bootstrap";
 
 class ListaReclamacoes extends Component {
 
     constructor(props) {
         super(props);
 
+        this.myRef = React.createRef();
         this.state = {
-            posts: []
+            posts: [],
         }
     }
 
-    // const randomId = 128398723
-    // const url = `/post/${randomId}`;
-    // getPost(url)
-    // export const getPost = (funcParamURL) => {
-    //     return axios.get(`${funcParamURL}`);
-    // }
-    // const randomId = 128398723
-    // const url = `/post/${randomId}`;
-    // getPost(url)
-    // export const makeRequest = (funcParamURL) => {
-    //     const newUrl = funcParamURL;
-    //     return axios.get(newUrl);
+    // updateId(e) {
+    //     this.setState({
+    //         id: e.target.value
+    //     })
     // }
 
-
+    handleSubmit = () => {
+        this.componentDidMount();
+    }
 
     componentDidMount() {
-        let id = 2;
-        let url = `http://localhost:8080/api/usuarios/${id}/reclamacoes`;
-
+        let id = this.myRef.current.value;
+        let url = 'http://localhost:8080/api/usuarios/' + id + '/reclamacoes';
         axios.get(url)
             .then(response => {
                 this.setState({
@@ -39,24 +34,18 @@ class ListaReclamacoes extends Component {
                 console.log(response.data)
             })
     }
-    componentDidUpdate(prevProps, prevState) {
-        let id = 2;
-        let url = `http://localhost:8080/api/usuarios/${id}/reclamacoes`;
-
-        if (prevState.posts !== this.state.posts) {
-            axios.get(url)
-                .then(response => {
-                    this.setState({
-                        posts: response.data
-                    })
-                })
-        }
-    }
 
     render() {
+
         const { posts } = this.state
         return (
             <>
+                <div>
+                    <Form>
+                        <FormLabel htmlFor="id">Digite o id do usuário para visualizar as reclamações</FormLabel>
+                        <FormControl type="number" id="id" name="id" ref={this.myRef} onBlur={this.handleSubmit} />
+                    </Form>
+                </div>
                 <div className="table-responsive">
                     <table className="table table-sm">
                         <thead>
@@ -65,6 +54,7 @@ class ListaReclamacoes extends Component {
                                 <th>Categoria</th>
                                 <th>CEP</th>
                                 <th>Comentário</th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -74,6 +64,7 @@ class ListaReclamacoes extends Component {
                                     <td>{post.categoria}</td>
                                     <td>{post.cep}</td>
                                     <td>{post.obs}</td>
+                                    <td><Button onClick={this.handleClick()}>Deletar</Button></td>
                                 </tr>
                             ))}
                         </tbody>

@@ -16,8 +16,19 @@ class RegistroPJ extends Component {
             telefone: '',
             cep: '',
             cidade: '',
-            estado: ''
+            estado: '',
+            senha: ''
         }
+    }
+
+    confSenha() {
+        var senha = document.getElementById("senha").value
+        var confSenha = document.getElementById("confSenha").value
+        if (senha !== confSenha) {
+            alert('Senhas não coincidem! Por favor verifique');
+            return false;
+        }
+        return true;
     }
 
     handleChange = (e) => {
@@ -35,7 +46,7 @@ class RegistroPJ extends Component {
     }
 
     render() {
-        const { nome, cnpj, email, site, numeroFuncionarios, telefone, cep, cidade, estado } = this.state;
+        const { nome, cnpj, email, site, numeroFuncionarios, telefone, cep, cidade, estado, senha } = this.state;
         return (
             <Container className="my-5">
                 <h1>Cadastro</h1>
@@ -43,79 +54,89 @@ class RegistroPJ extends Component {
                 <Row>
                     <Col lg={true}>
                         <Form onSubmit={this.handleSubmit}>
-                            <div>
-                                <FormLabel htmlFor="nome">Nome da Empresa:</FormLabel>
-                                <FormControl type="text" name="nome" id="nome" value={nome} onChange={this.handleChange} maxlength="30" required />
-                            </div>
-                            <div>
-                                <FormLabel htmlFor="cnpj">Cnpj:</FormLabel>
-                                <FormControl type="text" name="cnpj" value={cnpj} onChange={this.handleChange} pattern="(\d{3}\.?\d{3}\.?\d{3}-?\d{2})|(\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2})" title="Digite seu CNPJ no formato 'XXXXXXXXXXX'" required />
-                            </div>
-                            <div>
-                                <FormLabel htmlFor="email">Email do responsável:</FormLabel>
-                                <FormControl type="email" name="email" value={email} onChange={this.handleChange} />
-                            </div>
-                            <div>
-                                <FormLabel htmlFor="site">Site:</FormLabel>
-                                <FormControl type="text" name="site" value={site} onChange={this.handleChange} />
-                            </div>
-                            <div>
-                                <FormLabel htmlFor="numeroFuncionarios">Número de funcionários:</FormLabel>
-                                <FormControl type="number" name="numeroFuncionarios" value={numeroFuncionarios} onChange={this.handleChange} />
-                            </div>
-                            <div>
-                                <FormLabel htmlFor="telefone">Telefone:</FormLabel>
-                                <FormControl type="text" name="telefone" value={telefone} onChange={this.handleChange} pattern="^[1-9]{2}[0-9]{4,5}[0-9]{4}$"
-                                    required title="Telefone deve ser no formato '11999999999'" />
-                            </div>
-                        </Form>
-                    </Col>
-                    <Col lg={true}>
-                        <Form>
-                            <div>
-                                <FormLabel htmlFor="cep">CEP: </FormLabel>
-                                <FormControl type="text" name="cep" value={cep} onChange={this.handleChange} required pattern="\d{5}-?\d{3}" />
-                            </div>
-                            <div>
-                                <FormLabel htmlFor="cidade">Cidade: </FormLabel>
-                                <FormControl type="text" name="cidade" value={cidade} onChange={this.handleChange} required />
-                            </div>
-                            <div>
-                                <FormLabel htmlFor="estado">Estado: </FormLabel>
-                                <FormSelect name="estado" onChange={this.handleChange} value={estado} required>
-                                    <option disabled selected value="">Escolha uma opção:</option>
-                                    <option value="AC">Acre</option>
-                                    <option value="AL">Alagoas</option>
-                                    <option value="AP">Amapá</option>
-                                    <option value="AM">Amazonas</option>
-                                    <option value="BA">Bahia</option>
-                                    <option value="CE">Ceará</option>
-                                    <option value="DF">Distrito Federal</option>
-                                    <option value="ES">Espírito Santo</option>
-                                    <option value="GO">Goiás</option>
-                                    <option value="MA">Maranhão</option>
-                                    <option value="MT">Mato Grosso</option>
-                                    <option value="MS">Mato Grosso do Sul</option>
-                                    <option value="MG">Minas Gerais</option>
-                                    <option value="PA">Pará</option>
-                                    <option value="PB">Paraíba</option>
-                                    <option value="PR">Paraná</option>
-                                    <option value="PE">Pernambuco</option>
-                                    <option value="PI">Piauí</option>
-                                    <option value="RJ">Rio de Janeiro</option>
-                                    <option value="RN">Rio Grande do Norte</option>
-                                    <option value="RS">Rio Grande do Sul</option>
-                                    <option value="RO">Rondônia</option>
-                                    <option value="RR">Roraima</option>
-                                    <option value="SC">Santa Catarina</option>
-                                    <option value="SP">São Paulo</option>
-                                    <option value="SE">Sergipe</option>
-                                    <option value="TO">Tocantins</option>
-                                </FormSelect>
-                            </div>
-                            <FormGroup>
-                                <Button className="my-4" type="submit">Cadastrar</Button>
-                            </FormGroup>
+                            <Row>
+                                <Col>
+                                    <div>
+                                        <FormLabel htmlFor="nome">Nome da Empresa: </FormLabel>
+                                        <FormControl type="text" name="nome" id="nome" value={nome} onChange={this.handleChange} maxlength="30" required />
+                                    </div>
+                                    <div>
+                                        <FormLabel htmlFor="cnpj">Cnpj: </FormLabel>
+                                        <FormControl type="text" name="cnpj" value={cnpj} onChange={this.handleChange} pattern="(\d{3}\.?\d{3}\.?\d{3}-?\d{2})|(\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2})" title="Digite seu CNPJ no formato 'XXXXXXXXXXX'" required />
+                                    </div>
+                                    <div>
+                                        <FormLabel htmlFor="email">Email do responsável: </FormLabel>
+                                        <FormControl type="email" name="email" value={email} onChange={this.handleChange} />
+                                    </div>
+                                    <div>
+                                        <FormLabel htmlFor="site">Site: </FormLabel>
+                                        <FormControl type="text" name="site" value={site} onChange={this.handleChange} />
+                                    </div>
+                                    <div>
+                                        <FormLabel htmlFor="numeroFuncionarios">Número de funcionários: </FormLabel>
+                                        <FormControl type="number" name="numeroFuncionarios" value={numeroFuncionarios} onChange={this.handleChange} />
+                                    </div>
+                                    <div>
+                                        <FormLabel htmlFor="telefone">Telefone: </FormLabel>
+                                        <FormControl type="text" name="telefone" value={telefone} onChange={this.handleChange} pattern="^[1-9]{2}[0-9]{4,5}[0-9]{4}$"
+                                            required title="Telefone deve ser no formato '11999999999'" />
+                                    </div>
+                                </Col>
+                                <Col>
+                                    <div>
+                                        <FormLabel htmlFor="cep">CEP: </FormLabel>
+                                        <FormControl type="text" name="cep" value={cep} onChange={this.handleChange} required pattern="\d{5}-?\d{3}" />
+                                    </div>
+                                    <div>
+                                        <FormLabel htmlFor="cidade">Cidade: </FormLabel>
+                                        <FormControl type="text" name="cidade" value={cidade} onChange={this.handleChange} required />
+                                    </div>
+                                    <div>
+                                        <FormLabel htmlFor="estado">Estado: </FormLabel>
+                                        <FormSelect name="estado" onChange={this.handleChange} value={estado} required>
+                                            <option disabled selected value="">Escolha uma opção: </option>
+                                            <option value="AC">Acre</option>
+                                            <option value="AL">Alagoas</option>
+                                            <option value="AP">Amapá</option>
+                                            <option value="AM">Amazonas</option>
+                                            <option value="BA">Bahia</option>
+                                            <option value="CE">Ceará</option>
+                                            <option value="DF">Distrito Federal</option>
+                                            <option value="ES">Espírito Santo</option>
+                                            <option value="GO">Goiás</option>
+                                            <option value="MA">Maranhão</option>
+                                            <option value="MT">Mato Grosso</option>
+                                            <option value="MS">Mato Grosso do Sul</option>
+                                            <option value="MG">Minas Gerais</option>
+                                            <option value="PA">Pará</option>
+                                            <option value="PB">Paraíba</option>
+                                            <option value="PR">Paraná</option>
+                                            <option value="PE">Pernambuco</option>
+                                            <option value="PI">Piauí</option>
+                                            <option value="RJ">Rio de Janeiro</option>
+                                            <option value="RN">Rio Grande do Norte</option>
+                                            <option value="RS">Rio Grande do Sul</option>
+                                            <option value="RO">Rondônia</option>
+                                            <option value="RR">Roraima</option>
+                                            <option value="SC">Santa Catarina</option>
+                                            <option value="SP">São Paulo</option>
+                                            <option value="SE">Sergipe</option>
+                                            <option value="TO">Tocantins</option>
+                                        </FormSelect>
+                                    </div>
+                                    <div>
+                                        <FormLabel htmlFor="senha">Senha: </FormLabel>
+                                        <FormControl type="password" name="senha" id="senha" value={senha} onChange={this.handleChange} required />
+                                    </div>
+                                    <div>
+                                        <FormLabel htmlFor="senha">Confirme sua senha: </FormLabel>
+                                        <FormControl type="password" name="confSenha" id="confSenha" onChange={this.handleChange} onBlur={this.confSenha} required />
+                                    </div>
+                                    <FormGroup>
+                                        <Button className="my-4" type="submit">Cadastrar</Button>
+                                    </FormGroup>
+                                </Col>
+                            </Row>
                         </Form>
                     </Col>
                     <Col lg={7} className="d-flex justify-content-center align-items-center">

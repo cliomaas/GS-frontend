@@ -24,6 +24,15 @@
   padding:0 23%;
 }
 
+footer{
+  background-color: #455A64;
+  color: white;
+}
+
+.linha{
+    border-left: 2px solid white;
+  height: 100%;
+}
 @media (min-width: 1400px){
   .logo{
     width: 10%;
