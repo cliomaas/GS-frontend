@@ -1,12 +1,14 @@
 
 import Footer from "../../components/Footer";
 import NavBar from "../../components/NavBar";
+import HomeComponent from "../../components/Home";
+
 
 function Home() {
     return (
         <>
             <NavBar></NavBar>
-            <p>Oi</p>
+            <HomeComponent></HomeComponent>
             <Footer></Footer>
         </>
     );

@@ -34,10 +34,20 @@ footer{
   color: white;
 }
 
+.dropdown-toggle {
+  width: 100%;
+}
 .linha{
     border-left: 2px solid white;
   height: 100%;
 }
+
+.header{
+  background-image: url(./assets/img/paisagem.png);
+  height: 62vh;
+  background-position-y: 82%;
+}
+
 @media (min-width: 1400px){
   .logo{
     width: 10%;
