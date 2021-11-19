@@ -24,7 +24,7 @@ export default function DashBoardPF() {
                     </Col>
                 </Row>
                 <div className="d-flex flex-column p-5 align-items-center">
-                    <Button as={Link} to="/lista" className="mb-2 botoesDash">Fazer nova reclamação</Button>
+                    <Button as={Link} to="/nova-reclamacao" className="mb-2 botoesDash">Fazer nova reclamação</Button>
                     <Button as={Link} to="/lista" className="botoesDash">Gerenciar reclamações existentes</Button>
                 </div>
             </Container>

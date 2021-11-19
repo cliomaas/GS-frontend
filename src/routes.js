@@ -9,6 +9,8 @@ import ListaRecl from "./pages/ListaRecl"
 import Alteracao from "./pages/Alteracao";
 import LoginReclamacao from "./pages/LoginReclamacao"
 import DashBoardPF from "./pages/Dashboard/PF";
+import RegistroReclamacao from "./pages/NovaReclamacao";
+import SobrePage from "./pages/Sobre";
 
 
 const RoutesSchema = () => {
@@ -23,6 +25,8 @@ const RoutesSchema = () => {
                 <Route element={<ListaRecl />} path="/lista" />
                 <Route element={<LoginReclamacao />} path="/login-reclamacao" />
                 <Route element={<DashBoardPF />} path="/dashboard-pf" />
+                <Route element={<RegistroReclamacao />} path="/nova-reclamacao" />
+                <Route element={<SobrePage />} path="/sobre" />
             </Routes>
         </BrowserRouter>
     );

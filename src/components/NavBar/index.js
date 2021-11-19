@@ -15,7 +15,7 @@ export default function NavBar() {
                 <Navbar.Collapse id="basic-navbar-nav" className="flex-grow-0">
                     <Nav className="me-auto">
                         <Nav.Link as={Link} to="/">Home</Nav.Link>
-                        <Nav.Link as={Link} to="/registro-pf">Sobre</Nav.Link>
+                        <Nav.Link as={Link} to="/sobre">Sobre</Nav.Link>
                         <NavDropdown title="Cadastre-se" id="basic-nav-dropdown">
                             <NavDropdown.Item as={Link} to="/registro-pf">Sou cidadão</NavDropdown.Item>
                             <NavDropdown.Divider />
