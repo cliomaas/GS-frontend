@@ -28,7 +28,7 @@ html{
     width: 80%;
 
 }
-.containerLista, .containerLoginReclamacao, .containerDashboard{
+.containerLista, .containerLoginReclamacao, .containerDashboard, .containerSobre{
   min-height: 70vh;
 }
 
@@ -64,6 +64,10 @@ footer{
 
 .card{
   min-width: 20vw;
+}
+
+.card-sobre{
+  height: 50vh;
 }
 
 .cardReclamacoes{
@@ -116,18 +120,24 @@ footer{
 
 }
 
-.cardReclamacoes::-webkit-scrollbar{
+.img-sobre{
+    height: 272px;
+    object-fit: cover;
+    object-position: 30% 42%;
+}
+
+.cardReclamacoes::-webkit-scrollbar, .row-sobre::-webkit-scrollbar{
 width: 12px;
 height: 12px;
 }
-.cardReclamacoes::-webkit-scrollbar-thumb{
+.cardReclamacoes::-webkit-scrollbar-thumb, .row-sobre::-webkit-scrollbar-thumb{
 background: #397D9C;
 border-radius: 30px;
 }
-.cardReclamacoes::-webkit-scrollbar-thumb:hover{
+.cardReclamacoes::-webkit-scrollbar-thumb:hover, .row-sobre::-webkit-scrollbar-thumb:hover{
 background: #B3AFB3;
 }
-.cardReclamacoes::-webkit-scrollbar-track{
+.cardReclamacoes::-webkit-scrollbar-track, .row-sobre::-webkit-scrollbar-track{
 background: #F5F5F5;
 border-radius: 0px;
 box-shadow: inset 0px 0px 0px 0px #F0F0F0;

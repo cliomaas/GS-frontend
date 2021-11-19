@@ -10,26 +10,31 @@ class Reclamacao extends Component {
             data: '',
             cep: '',
             obs: '',
-            usuario: { usuario_id: '' }
         }
     }
 
     handleChange = (e) => {
+        console.log(this.state)
         this.setState({
             [e.target.name]: e.target.value
         })
     }
 
+
+
     handleSubmit = (e) => {
         e.preventDefault();
         axios.post('http://localhost:8080/api/reclamacoes', this.state)
             .then(response => {
-                console.log(response)
-            })
+                alert('Reclamação submetida com sucesso!')
+            }).catch(
+                alert('Erro ao submeter informações')
+            )
+
     }
 
     render() {
-        const { categoria, data, cep, obs, usuario_id } = this.state;
+        const { categoria, data, cep, obs } = this.state;
         return (
             <Container className="my-5">
                 <Row>
@@ -41,10 +46,10 @@ class Reclamacao extends Component {
                                 <FormLabel htmlFor="categoria">Em qual categoria sua reclamação se encaixa melhor? </FormLabel>
                                 <FormSelect name="categoria" onChange={this.handleChange} value={categoria} required>
                                     <option disabled selected value="">Escolha uma opção:</option>
-                                    <option value="feminino">Contrução irregular</option>
-                                    <option value="masculino">Poluição</option>
-                                    <option value="outro">Energia Elétrica</option>
-                                    <option value="naoinformado">Perigo</option>
+                                    <option value="Construcao">Contrução irregular</option>
+                                    <option value="Poluicao">Poluição</option>
+                                    <option value="Energia">Energia Elétrica</option>
+                                    <option value="Perigo">Perigo</option>
                                 </FormSelect>
                             </div>
                             <FormLabel htmlFor="data" >Data do fato informado: </FormLabel>
@@ -55,9 +60,6 @@ class Reclamacao extends Component {
 
                             <FormLabel htmlFor="email">Observações sobre o fato informado: </FormLabel>
                             <FormControl type="text" name="obs" value={obs} onChange={this.handleChange} />
-
-                            <FormLabel htmlFor="usuario_id">A qual id pertence a reclamação? </FormLabel>
-                            <FormControl type="text" name="usuario_id" value={usuario_id} onChange={this.handleChange} />
                         </FormGroup>
                         <FormGroup>
                             <Button className="my-4" type="submit">Cadastrar</Button>

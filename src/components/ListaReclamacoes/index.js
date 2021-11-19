@@ -43,8 +43,8 @@ class ListaReclamacoes extends Component {
     }
 
     componentDidMount() {
-        let id = this.myRef.current.value;
-        let url = 'http://localhost:8080/api/usuarios/' + id + '/reclamacoes';
+        let cep = this.myRef.current.value;
+        let url = 'http://localhost:8080/api/' + cep + '/reclamacoes';
         axios.get(url)
             .then(response => {
                 this.setState({
@@ -62,8 +62,8 @@ class ListaReclamacoes extends Component {
                 <Container className="containerLista my-5">
                     <div>
                         <Form>
-                            <FormLabel htmlFor="id">Digite o id do usuário para visualizar as reclamações</FormLabel>
-                            <FormControl type="number" id="id" name="id" ref={this.myRef} />
+                            <FormLabel htmlFor="id">Digite o cep para ver as reclamações relacionadas à ele:</FormLabel>
+                            <FormControl type="number" id="cep" name="cep" ref={this.myRef} />
                             <Button className="my-2" onClick={this.handleSubmit}>Buscar</Button>
                         </Form>
                     </div>
