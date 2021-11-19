@@ -21,7 +21,7 @@ export default function Footer() {
                                 <h6>Quem somos nós?</h6>
                                 <p>Contate-nos:</p>
                                 <div className="d-flex align-items-center">
-                                    <i class="fas fa-phone-alt"></i>
+                                    <i class="fas fa-phone-alt mb-3"></i>
                                     <p>11 9826528190</p>
                                 </div>
                             </div>
