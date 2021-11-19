@@ -89,7 +89,7 @@ class ListaReclamacoes extends Component {
                                         <td>{post.cep}</td>
                                         <td>{post.obs}</td>
                                         <td><Button onClick={() => this.deletarReclamacao(post.id)}>Deletar</Button>
-                                            <Button onClick={() => this.editReclamacao()}>Deletar</Button></td>
+                                        </td>
                                     </tr>
                                 ))}
                             </tbody>

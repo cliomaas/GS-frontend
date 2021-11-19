@@ -42,8 +42,8 @@ class RegistroPF extends Component {
         axios.post('http://localhost:8080/api/usuarios', this.state)
             .then(response => {
                 console.log(response)
+                this.props.navigate('/login-pf');
             })
-        this.props.navigate('/login-pf');
     }
 
     render() {
@@ -59,11 +59,11 @@ class RegistroPF extends Component {
                                 <Row>
                                     <Col>
                                         <FormLabel htmlFor="nome" >Nome: </FormLabel>
-                                        <FormControl type="text" name="nome" id="nome" value={nome} onChange={this.handleChange} pattern="[A-Za-z]{1,30}" required />
+                                        <FormControl type="text" name="nome" id="nome" value={nome} onChange={this.handleChange} pattern="[a-z\s]+$" required />
                                     </Col>
                                     <Col>
                                         <FormLabel htmlFor="sobrenome">Sobrenome: </FormLabel>
-                                        <FormControl type="text" name="sobrenome" value={sobrenome} onChange={this.handleChange} pattern="[A-Za-z]{1,30}" required />
+                                        <FormControl type="text" name="sobrenome" value={sobrenome} onChange={this.handleChange} pattern="[a-z\s]+$" required />
                                     </Col>
                                 </Row>
                                 <div>

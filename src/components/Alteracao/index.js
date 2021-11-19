@@ -50,10 +50,10 @@ class AlteraReclamacao extends Component {
                                         <FormLabel htmlFor="categoria">Categoria: </FormLabel>
                                         <FormSelect name="categoria" onChange={this.handleChange} value={categoria} required>
                                             <option disabled selected value="">Escolha uma opção:</option>
-                                            <option value="ambiental">Ambiental</option>
-                                            <option value="eletricidade">Eletricidade</option>
-                                            <option value="alerta">Alerta</option>
-                                            <option value="construcao">Construção</option>
+                                            <option value="Construcao">Contrução irregular</option>
+                                            <option value="Poluicao">Poluição</option>
+                                            <option value="Energia">Energia Elétrica</option>
+                                            <option value="Perigo">Perigo</option>
                                         </FormSelect>
                                     </div>
                                     <div className="form-group">

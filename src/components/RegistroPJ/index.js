@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Container, Form, Row, Col, FormLabel, FormControl, FormSelect, FormGroup, Button } from "react-bootstrap";
 import Menino from "../../assets/img/menino.png"
+import withRouter from "../../HOC";
 
 class RegistroPJ extends Component {
     constructor(props) {
@@ -42,6 +43,7 @@ class RegistroPJ extends Component {
         axios.post('http://localhost:8080/api/empresas', this.state)
             .then(response => {
                 console.log(response)
+                this.props.navigate('/login-pj');
             })
     }
 
@@ -70,7 +72,7 @@ class RegistroPJ extends Component {
                                     </div>
                                     <div>
                                         <FormLabel htmlFor="site">Site: </FormLabel>
-                                        <FormControl type="text" name="site" value={site} onChange={this.handleChange} />
+                                        <FormControl type="url" name="site" value={site} onChange={this.handleChange} />
                                     </div>
                                     <div>
                                         <FormLabel htmlFor="numeroFuncionarios">Número de funcionários: </FormLabel>
@@ -147,4 +149,6 @@ class RegistroPJ extends Component {
         )
     }
 }
+
+RegistroPJ = withRouter(RegistroPJ)
 export default RegistroPJ

@@ -10,6 +10,7 @@ import LoginReclamacao from "./pages/LoginReclamacao"
 import DashBoardPF from "./pages/Dashboard/PF";
 import RegistroReclamacao from "./pages/NovaReclamacao";
 import SobrePage from "./pages/Sobre";
+import DashBoardPJ from "./pages/Dashboard/PJ";
 
 
 const RoutesSchema = () => {
@@ -24,6 +25,7 @@ const RoutesSchema = () => {
                 <Route element={<ListaRecl />} path="/lista" />
                 <Route element={<LoginReclamacao />} path="/login-reclamacao" />
                 <Route element={<DashBoardPF />} path="/dashboard-pf" />
+                <Route element={<DashBoardPJ />} path="/dashboard-pj" />
                 <Route element={<RegistroReclamacao />} path="/nova-reclamacao" />
                 <Route element={<SobrePage />} path="/sobre" />
             </Routes>

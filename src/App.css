@@ -8,6 +8,10 @@ html{
   width: 35%;
 }
 
+input[type="text"]{
+   text-transform: capitalize !important;
+}
+
 .linkNav{
   width: 80vw;
 }

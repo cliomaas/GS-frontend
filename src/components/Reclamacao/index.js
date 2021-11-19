@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Container, Form, FormControl, FormGroup, FormLabel, FormSelect, Button, Row } from "react-bootstrap";
+import withRouter from "../../HOC";
 class Reclamacao extends Component {
     constructor(props) {
         super(props);
@@ -27,6 +28,8 @@ class Reclamacao extends Component {
         axios.post('http://localhost:8080/api/reclamacoes', this.state)
             .then(response => {
                 alert('Reclamação submetida com sucesso!')
+                this.props.navigate('/lista');
+
             })
 
     }
@@ -69,4 +72,5 @@ class Reclamacao extends Component {
     }
 }
 
+Reclamacao = withRouter(Reclamacao)
 export default Reclamacao
