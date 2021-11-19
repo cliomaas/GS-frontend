@@ -9,7 +9,7 @@ export default function Sobre() {
     return (
         <Container className="containerSobre">
             <h1>A equipe idealizadora do projeto!</h1>
-            <Row style={{ height: '100vh', overflow: 'scroll' }} className="align-items-center row-sobre">
+            <Row style={{ height: '70vh' }} className="pt-5 row-sobre">
                 <Col lg={true} className="d-flex justify-content-center">
                     <Card style={{ width: '18rem' }} className="mb-3 card-sobre">
                         <Card.Img variant="top" src={Carol} className="img-sobre card-sobre" />

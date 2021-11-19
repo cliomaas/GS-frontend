@@ -27,9 +27,7 @@ class Reclamacao extends Component {
         axios.post('http://localhost:8080/api/reclamacoes', this.state)
             .then(response => {
                 alert('Reclamação submetida com sucesso!')
-            }).catch(
-                alert('Erro ao submeter informações')
-            )
+            })
 
     }
 

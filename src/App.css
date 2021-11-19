@@ -28,9 +28,17 @@ html{
     width: 80%;
 
 }
-.containerLista, .containerLoginReclamacao, .containerDashboard, .containerSobre{
+.containerLoginReclamacao, .containerDashboard, .containerSobre{
   min-height: 70vh;
 }
+
+.div-incentivo{
+  height: 30vh;
+  background-color: #d8e8ef;
+}
+/* .containerLista{
+  min-height: 52vh
+} */
 
 .btn-primary{
   background-color: #397d9c !important;
@@ -78,6 +86,9 @@ footer{
 
 }
 
+.row-sobre{
+  overflow-y: scroll;
+}
 .cardDashboard{
   height: 60vh;
  padding: 52px 10px;
@@ -156,6 +167,8 @@ box-shadow: inset 0px 0px 0px 0px #F0F0F0;
   .botoesDash{
    width: 37vw;
 }
-
+.row-sobre{
+  overflow: hidden;
+}
 
 }

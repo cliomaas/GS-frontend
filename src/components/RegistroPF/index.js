@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Container, Form, FormControl, FormGroup, FormLabel, FormSelect, Button, Row, Col } from "react-bootstrap";
 import Menina from "../../assets/img/menina.png"
+import withRouter from "../../HOC";
 
 class RegistroPF extends Component {
     constructor(props) {
@@ -16,6 +17,8 @@ class RegistroPF extends Component {
             cep: '',
             senha: ''
         }
+
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     confSenha() {
@@ -40,7 +43,7 @@ class RegistroPF extends Component {
             .then(response => {
                 console.log(response)
             })
-        window.location.href = "http://localhost:3000/"
+        this.props.navigate('/login-pf');
     }
 
     render() {
@@ -108,4 +111,6 @@ class RegistroPF extends Component {
         )
     }
 }
+
+RegistroPF = withRouter(RegistroPF)
 export default RegistroPF

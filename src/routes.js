@@ -6,7 +6,6 @@ import RegistroPessoaJuridica from "./pages/RegistroPJ";
 import LoginPagePF from "./pages/Login/PF";
 import LoginPagePJ from "./pages/Login/PJ";
 import ListaRecl from "./pages/ListaRecl"
-import Alteracao from "./pages/Alteracao";
 import LoginReclamacao from "./pages/LoginReclamacao"
 import DashBoardPF from "./pages/Dashboard/PF";
 import RegistroReclamacao from "./pages/NovaReclamacao";

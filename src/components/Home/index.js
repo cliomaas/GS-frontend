@@ -40,6 +40,10 @@ export default function HomeComponent() {
                     </Row>
                 </div>
             </Container>
+            <Row className="p-5 my-5 div-incentivo">
+                <h5>Cada um de nós tem o poder da transformação e juntos somos mais fortes!
+                    Acreditamos em uma sociedade unida e ativa na transformação social. Venha conosco construir um Brasil e um futuro melhor.</h5>
+            </Row>
         </div>
     );
 }

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Form, FormControl, FormLabel, Button, Container, Table } from "react-bootstrap";
+import withRouter from "../../HOC";
 
 class ListaReclamacoes extends Component {
 
@@ -19,7 +20,7 @@ class ListaReclamacoes extends Component {
 
 
     editReclamacao(id) {
-        window.location.href = `/add-employee/${id}`;
+        this.props.navigate(`/alterar/`);
     }
 
     deletar(idrecl) {
@@ -59,10 +60,10 @@ class ListaReclamacoes extends Component {
         const { posts } = this.state
         return (
             <>
-                <Container className="containerLista my-5">
+                <Container className="containerLista">
                     <div>
                         <Form>
-                            <FormLabel htmlFor="id">Digite o cep para ver as reclamações relacionadas à ele:</FormLabel>
+                            <FormLabel htmlFor="cep">Filtre as reclamações por CEP:</FormLabel>
                             <FormControl type="number" id="cep" name="cep" ref={this.myRef} />
                             <Button className="my-2" onClick={this.handleSubmit}>Buscar</Button>
                         </Form>
@@ -88,7 +89,7 @@ class ListaReclamacoes extends Component {
                                         <td>{post.cep}</td>
                                         <td>{post.obs}</td>
                                         <td><Button onClick={() => this.deletarReclamacao(post.id)}>Deletar</Button>
-                                        </td>
+                                            <Button onClick={() => this.editReclamacao()}>Deletar</Button></td>
                                     </tr>
                                 ))}
                             </tbody>
@@ -100,4 +101,5 @@ class ListaReclamacoes extends Component {
     }
 }
 
+ListaReclamacoes = withRouter(ListaReclamacoes)
 export default ListaReclamacoes;
