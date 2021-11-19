@@ -10,7 +10,7 @@ class LoginPJ extends Component {
                 <Row className="align-items-center">
                     <Col lg={true}>
                         <h1 className="text-center">Login</h1>
-                        <Button as={Link} to="/registro-pf" className="my-2 w-100" variant="light">Ainda não é cliente?
+                        <Button as={Link} to="/registro-pj" className="my-2 w-100" variant="light">Ainda não é cliente?
                         </Button>
                         <Form className="form">
                             <FormLabel htmlFor="email" >Email: </FormLabel>
@@ -20,7 +20,7 @@ class LoginPJ extends Component {
                             <Button className="my-4 justify-content-center" type="submit">Entrar</Button>
                         </Form>
                     </Col>
-                    <Col lg={true}>
+                    <Col lg={true} className="d-flex justify-content-center align-items-center col-lg-7">
                         <img className="mulherPredio" src={PessoasMapa} alt="pessoas vendo mapa"></img>
                     </Col>
                 </Row>

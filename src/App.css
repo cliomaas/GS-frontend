@@ -1,6 +1,7 @@
 html{
   height: 100vh;
   width: 100vw;
+  overflow-x: hidden;
 }
 
 .logo{
@@ -27,16 +28,24 @@ html{
     width: 80%;
 
 }
-.containerLista, .containerLoginReclamacao{
+.containerLista, .containerLoginReclamacao, .containerDashboard{
   min-height: 70vh;
 }
 
 .btn-primary{
   background-color: #397d9c !important;
+  border: none!important;
 }
 
+.botoesDash{
+  width: 93vw;
+}
 .containerLogin{
   min-height: 64vh;
+}
+
+.icones-dashboard{
+  margin-left: 10px;
 }
 
 footer{
@@ -45,16 +54,56 @@ footer{
   color: white;
 }
 
+.barra-progresso{
+  min-width: 15vw;
+}
+
+.progress-bar{
+  background-color: #397d9c !important;
+}
+
+.card{
+  min-width: 20vw;
+}
+
+.cardReclamacoes{
+  background-color: #d8e8ef !important;
+  border-radius: 4px;
+  height: 60vh;
+  overflow-y: scroll;
+
+}
+
+.cardDashboard{
+  height: 60vh;
+ padding: 52px 10px;
+}
 .dropdown-toggle {
   width: 100%;
 }
 .linha{
-    border-left: 2px solid white;
+  border-left: 2px solid white;
   height: 100%;
 }
-
+.linha2{
+  border-left: 2px solid #455A64;
+  height: 100%;
+}
 .dropdown-item:active{
   background-color: #397d9c !important;
+}
+
+.form-control:focus{
+  border-color: #397d9c!important;
+  box-shadow: 0 0 0 0.25rem rgb(57 125 156 / 25%)!important;
+}
+
+.btn-primary:focus {
+  box-shadow: 0 0 0 0.25rem rgb(57 125 156 / 50%) !important;
+}
+
+.primary.dropdown-toggle:focus{
+  box-shadow: 0 0 0 0.25rem rgb(57 125 156 / 50%) !important;
 }
 
 .header{
@@ -67,6 +116,23 @@ footer{
 
 }
 
+.cardReclamacoes::-webkit-scrollbar{
+width: 12px;
+height: 12px;
+}
+.cardReclamacoes::-webkit-scrollbar-thumb{
+background: #397D9C;
+border-radius: 30px;
+}
+.cardReclamacoes::-webkit-scrollbar-thumb:hover{
+background: #B3AFB3;
+}
+.cardReclamacoes::-webkit-scrollbar-track{
+background: #F5F5F5;
+border-radius: 0px;
+box-shadow: inset 0px 0px 0px 0px #F0F0F0;
+}
+
 @media (min-width: 1400px){
   .menina{
    height: 70%;
@@ -77,6 +143,9 @@ footer{
   .header{
     display: block;
   }
+  .botoesDash{
+   width: 37vw;
+}
 
 
 }

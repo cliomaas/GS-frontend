@@ -1,5 +1,6 @@
 import React from "react"
-import LoginPF from "../../../components/LoginPF"
+import Footer from "../../../components/Footer";
+import LoginPJ from "../../../components/LoginPJ";
 import NavBar from "../../../components/NavBar";
 
 function LoginPagePJ() {
@@ -7,7 +8,8 @@ function LoginPagePJ() {
     return (
         <>
             <NavBar></NavBar>
-            <LoginPF></LoginPF>
+            <LoginPJ></LoginPJ>
+            <Footer></Footer>
         </>);
 }
 

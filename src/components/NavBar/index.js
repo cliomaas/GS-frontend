@@ -23,7 +23,7 @@ export default function NavBar() {
                         </NavDropdown>
                         <DropdownButton id="dropdown-basic-button" title="Login">
                             <Dropdown.Item as={Link} to="/login-pf">Cidadão</Dropdown.Item>
-                            <Dropdown.Item href="#/action-2">Empresa parceira</Dropdown.Item>
+                            <Dropdown.Item as={Link} to="/login-pj">Empresa parceira</Dropdown.Item>
                         </DropdownButton>
                     </Nav>
                 </Navbar.Collapse>

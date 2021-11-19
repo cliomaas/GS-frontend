@@ -11,7 +11,7 @@ export default function LoginRecl() {
                         <h3 className="text-center">Opa! Para efetuar uma reclamação você precisa estar logado!</h3>
                         <div className="d-flex flex-column">
                             <Button className="my-2" as={Link} to="/login-pf">Sou pessoa física</Button>
-                            <Button as={Link} to="">Sou empresa parceira</Button>
+                            <Button as={Link} to="/login-pj">Sou empresa parceira</Button>
                         </div>
                         <DropdownButton className="my-2" variant="light" title="Ainda não é cliente?">
                             <Dropdown.Item>Sou cidadão</Dropdown.Item>
