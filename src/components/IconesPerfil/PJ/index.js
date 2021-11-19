@@ -13,19 +13,19 @@ export default function IconesPerfilPJ() {
                 <p>Bem vindo, {nome}</p>
             </div>
             <div className="d-flex align-items-center">
-                <i class="fas fa-eye mb-3"></i>
+                <i className="fas fa-eye mb-3"></i>
                 <p className="icones-dashboard">Visão Geral</p>
             </div>
             <div className="d-flex align-items-center">
-                <i class="fas fa-book-open mb-3"></i>
-                <p class="icones-dashboard">Minhas Reclamações</p>
+                <i className="fas fa-book-open mb-3"></i>
+                <p className="icones-dashboard">Minhas Reclamações</p>
             </div>
             <div className="d-flex align-items-center">
-                <i class="fas fa-camera mb-3"></i>
+                <i className="fas fa-camera mb-3"></i>
                 <p className="icones-dashboard">Registrar Reclamação</p>
             </div>
             <div className="d-flex align-items-center">
-                <i class="fas fa-arrow-left mb-3"></i>
+                <i className="fas fa-arrow-left mb-3"></i>
                 <p className="icones-dashboard">Sair</p>
             </div>
         </Card>
