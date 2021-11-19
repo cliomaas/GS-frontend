@@ -8,7 +8,7 @@ export default function Sobre() {
 
     return (
         <Container className="containerSobre">
-            <h1>A equipe idealizadora do projeto!</h1>
+            <h1 className="text-center">A equipe idealizadora do projeto!</h1>
             <Row style={{ height: '70vh' }} className="pt-5 row-sobre">
                 <Col lg={true} className="d-flex justify-content-center">
                     <Card style={{ width: '18rem' }} className="mb-3 card-sobre">
