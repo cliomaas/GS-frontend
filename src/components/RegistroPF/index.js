@@ -59,11 +59,11 @@ class RegistroPF extends Component {
                                 <Row>
                                     <Col>
                                         <FormLabel htmlFor="nome" >Nome: </FormLabel>
-                                        <FormControl type="text" name="nome" id="nome" value={nome} onChange={this.handleChange} pattern="[a-z\s]+$" required />
+                                        <FormControl type="text" name="nome" id="nome" value={nome} onChange={this.handleChange} required />
                                     </Col>
                                     <Col>
                                         <FormLabel htmlFor="sobrenome">Sobrenome: </FormLabel>
-                                        <FormControl type="text" name="sobrenome" value={sobrenome} onChange={this.handleChange} pattern="[a-z\s]+$" required />
+                                        <FormControl type="text" name="sobrenome" value={sobrenome} onChange={this.handleChange} required />
                                     </Col>
                                 </Row>
                                 <div>

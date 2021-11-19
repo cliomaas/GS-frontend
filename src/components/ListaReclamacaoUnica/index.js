@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-import { Card, Button, Alert } from 'react-bootstrap';
+import { Card, Alert } from 'react-bootstrap';
+
 
 class ListaReclamacaoUnica extends Component {
     constructor(props) {
@@ -12,6 +13,8 @@ class ListaReclamacaoUnica extends Component {
             obs: ''
         }
     }
+
+
 
     componentDidMount() {
         axios.get('http://localhost:8080/api/reclamacoes/6')
@@ -29,7 +32,9 @@ class ListaReclamacaoUnica extends Component {
             <div className="cardReclamacoes p-3" style={{ overflow: "auto" }}>
                 {
                     <Card className="mb-4 w-100 text-center" key={id}>
-                        <h6>{categoria}</h6>
+                        <div>
+                            <h6>{categoria}</h6>
+                        </div>
                         <p>{obs}</p>
                         <Alert variant="success">Em andamento</Alert>
                     </Card>
