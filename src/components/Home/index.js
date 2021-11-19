@@ -12,7 +12,7 @@ export default function HomeComponent() {
                     <h1>você merece!</h1>
                     <p className="text-center">Como você quer ajudar São Paulo hoje?</p>
                 </div>
-                <div className="d-flex pt-5 w-50 align-items-center flex-column">
+                <div className="d-flex pt-2 w-50 align-items-center flex-column">
                     <Button as={Link} to="/login-reclamacao" className="botaoReclamacaoHome">Registrar reclamação</Button>
                 </div>
             </div>

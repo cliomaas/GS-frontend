@@ -23,7 +23,7 @@ html{
   align-items: center;
 }
 
-.menina, .menino, .pessoasPredio{
+.menina, .menino, .pessoasPredio, .mulherPredio{
     width: 80%;
 
 }
@@ -35,12 +35,8 @@ html{
   background-color: #397d9c !important;
 }
 
-.form{ 
-  padding:0 23%;
-}
-
 .containerLogin{
-  height: 64vh;
+  min-height: 64vh;
 }
 
 footer{
@@ -57,11 +53,14 @@ footer{
   height: 100%;
 }
 
+.dropdown-item:active{
+  background-color: #397d9c !important;
+}
 
 .header{
   background-image: url(./assets/img/paisagem.png);
   height: 62vh;
-  background-position-y: 82%;
+  background-position-y: 99%;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -1,9 +1,9 @@
 import { Component } from "react";
 import { Container, Form, FormControl, FormLabel, Button, Row, Col } from "react-bootstrap";
-import MulherPredio from "../../assets/img/mulherpredio.svg"
+import PessoasMapa from "../../assets/img/pessoasmapa.svg"
 import { Link } from "react-router-dom";
 
-class LoginPF extends Component {
+class LoginPJ extends Component {
     render() {
         return (
             <Container className="my-5 containerLogin w-75">
@@ -21,7 +21,7 @@ class LoginPF extends Component {
                         </Form>
                     </Col>
                     <Col lg={true}>
-                        <img className="mulherPredio" src={MulherPredio} alt="mulher em predio"></img>
+                        <img className="mulherPredio" src={PessoasMapa} alt="pessoas vendo mapa"></img>
                     </Col>
                 </Row>
             </Container>
@@ -29,6 +29,4 @@ class LoginPF extends Component {
     }
 }
 
-export default LoginPF
-
-
+export default LoginPJ
