@@ -32,9 +32,9 @@ class LoginPJ extends Component {
                         </Button>
                         <Form className="form" onSubmit={this.handleSubmit}>
                             <FormLabel htmlFor="email" >Email: </FormLabel>
-                            <FormControl type="email" name="email" id="email" />
+                            <FormControl type="email" name="email" id="email" required />
                             <FormLabel htmlFor="senha">Senha: </FormLabel>
-                            <FormControl type="password" name="senha" id="senha" />
+                            <FormControl type="password" name="senha" id="senha" required />
                             <Button className="my-4 justify-content-center" onClick={this.handleClick} type="submit">Entrar</Button>
                         </Form>
                     </Col>
