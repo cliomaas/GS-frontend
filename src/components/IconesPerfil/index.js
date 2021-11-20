@@ -12,7 +12,7 @@ export default function IconesPerfil() {
         <Card className="card-dashboard p-4 justify-content-around">
             <div className="d-flex flex-column align-items-center">
                 <img src={FotoPerfil} alt="foto de perfil"></img>
-                <p style={{ color: 'black' }}>Bem vindo(a), {nome}</p>
+                <p style={{ color: 'black' }}>Bem vindo, {nome}</p>
             </div>
             <div className="d-flex align-items-center">
                 <i className="fas fa-eye mb-3"></i>

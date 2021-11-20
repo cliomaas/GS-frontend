@@ -1,6 +1,6 @@
 import { Component } from "react";
 import { Container, Form, FormControl, FormLabel, Button, Row, Col } from "react-bootstrap";
-import mulherPredio from "../../assets/img/mulherpredio.svg"
+import MulherPredio from "../../assets/img/mulherpredio.svg"
 import { Link } from "react-router-dom";
 import withRouter from "../../HOC";
 class LoginPF extends Component {
@@ -39,7 +39,7 @@ class LoginPF extends Component {
                         </Form>
                     </Col>
                     <Col lg={true}>
-                        <img className="mulher-predio" src={mulherPredio} alt="mulher em predio"></img>
+                        <img className="mulherPredio" src={MulherPredio} alt="mulher em predio"></img>
                     </Col>
                 </Row>
             </Container >

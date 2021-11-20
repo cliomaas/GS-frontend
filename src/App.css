@@ -12,7 +12,7 @@ input[type="text"]{
    text-transform: capitalize !important;
 }
 
-.link-nav{
+.linkNav{
   width: 80vw;
 }
 
@@ -28,7 +28,7 @@ input[type="text"]{
   align-items: center;
 }
 
-.menina, .menino, .pessoas-predio, .mulher-predio{
+.menina, .menino, .pessoasPredio, .mulherPredio{
     width: 80%;
 
 }
@@ -37,21 +37,13 @@ input[type="text"]{
 }
 
 .div-incentivo{
-  height: 39vh;
+  height: 30vh;
   background-color: #d8e8ef;
   color: #09366D !important;
-  width: 103vw;
-
 }
 /* .containerLista{
   min-height: 52vh
 } */
-
-.termos-footer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 .btn-primary{
   background-color: #397d9c !important;
@@ -88,7 +80,7 @@ footer{
 }
 
 .card-sobre{
-  height: 58vh;
+  height: 50vh;
 }
 
 .cardReclamacoes{
@@ -179,13 +171,10 @@ h3{
 }
 
 @media (min-width: 1400px){
-  .div-incentivo{
-   height: 30vh;
-  }
   .menina{
    height: 70%;
   }
-  .link-nav{
+  .linkNav{
     width: 30vw;
   }
   .header{

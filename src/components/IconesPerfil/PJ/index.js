@@ -1,6 +1,5 @@
-import { Card, Button } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import FotoPerfil from "../../../assets/img/foto perfil.svg"
-import { Link } from "react-router-dom";
 
 
 
@@ -26,8 +25,8 @@ export default function IconesPerfilPJ() {
                 <p className="icones-dashboard">Registrar Reclamação</p>
             </div>
             <div className="d-flex align-items-center">
-                <i class="fas fa-arrow-left mb-0"></i>
-                <Button variant="light" as={Link} to="/" className="icones-dashboard">Sair</Button>
+                <i className="fas fa-arrow-left mb-3"></i>
+                <p className="icones-dashboard">Sair</p>
             </div>
         </Card>
     );

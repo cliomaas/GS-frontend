@@ -29,7 +29,8 @@ class Reclamacao extends Component {
             .then(response => {
                 alert('Reclamação submetida com sucesso!')
                 this.props.navigate('/lista');
-            }).catch(alert('Reclamação não publicada, conecte-se ao back-end!'))
+
+            })
 
     }
 

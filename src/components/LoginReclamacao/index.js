@@ -19,7 +19,7 @@ export default function LoginRecl() {
                         </DropdownButton>
                     </Col>
                     <Col lg={true} className="d-flex justify-content-center align-items-center">
-                        <img src={PessoasPredio} className="pessoas-predio" alt="pessoas em predio"></img>
+                        <img src={PessoasPredio} className="pessoasPredio" alt="pessoas em predio"></img>
                     </Col>
                 </Row>
             </Container>
