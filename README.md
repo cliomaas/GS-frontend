@@ -67,9 +67,9 @@ Para ela funcionar no localhost, você precisa alterar o final da url que está 
 - Não precisamos de tantas informações, e esse era o objetivo do nosso projeto. Um cadastro sem perder tempo. Apenas as informações absolutamente essenciais. 
 
 
-#Esperamos que gostem do nosso projeto! 
+# Esperamos que gostem do nosso projeto! 
 
-##Equipe G6
+## Equipe G6
 
 
 
