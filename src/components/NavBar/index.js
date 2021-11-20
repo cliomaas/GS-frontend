@@ -8,7 +8,7 @@ export default function NavBar() {
     return (
         <Navbar bg="light" expand="lg">
             <Container>
-                <Link className="linkNav" to="/">
+                <Link className="link-nav" to="/">
                     <img className="logo" src={Logo} alt="logo"></img>
                 </Link>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />

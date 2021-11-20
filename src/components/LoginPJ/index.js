@@ -39,7 +39,7 @@ class LoginPJ extends Component {
                         </Form>
                     </Col>
                     <Col lg={true} className="d-flex justify-content-center align-items-center col-lg-7">
-                        <img className="mulherPredio" src={PessoasMapa} alt="pessoas vendo mapa"></img>
+                        <img className="mulher-predio" src={PessoasMapa} alt="pessoas vendo mapa"></img>
                     </Col>
                 </Row>
             </Container>
