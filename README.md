@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# Global Solutions 2021/2: ODS 11
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Nosso projeto tem como objetivo tornar a cidade um lugar mais seguro, inclusivo e verde, incluindo os cidadãos e empresas na equação, da seguinte forma:
 
-## Available Scripts
+•	Os cidadãos fazem um cadastro, que permite que eles façam reclamações sobre aspectos da cidade: Eletricidade (Ruas escuras, postes caídos, etc), Poluição (lixo, fábricas poluentes, etc), Perigo (Risco de assalto, assédio, etc) e Construção (construções irregulares) 
+•	Empresas se cadastram no nosso site, a fim de apadrinhar certas reclamações e fazer uma parceria com o governo, para solucionar o problema de forma mais ágil
 
-In the project directory, you can run:
+O que ganhamos?
+•	Os cidadãos ganham um espaço de compartilhamento do que faz eles infelizes na cidade, são ouvidos e ganham uma cidade mais inclusiva para eles
+•	As empresas ganham visibilidade, através de marketing, além de se beneficiarem com uma possível isenção de imposto
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Como fizemos?
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Para esse projeto, utilizamos ReactJS, e [react-bootstrap](https://react-bootstrap.github.io/) para estilização. Nossa primeira prioridade é que fosse um site de fácil responsividade, visto que eram muitas páginas, e que se conversassem entre si.
 
-### `yarn test`
+O projeto é integrado com o backend ([Springboot](https://spring.io/projects/spring-boot)), e a intenção inicial era utilizar o heroku como hospedagem de backend, porém por problemas técnicos não conseguimos efetivar essa integração. Por isso, sugerimos que se clone o projeto de backend, e faça o mesmo rodar no localhost:8080, pois a experiência é muito mais interessante quando se manipula os dados de verdade :) 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+(Link do repositório de backend) 
 
-### `yarn build`
+## As telas:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### [Home](https://gs-2021-g6.netlify.app/):
+<img src="https://i.imgur.com/REWvnBm.jpg" width=60%/>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Uma página que explica o objetivo do projeto, limpa e simples. Havia sido pedido uma explicação de como o usuario utiliza o sistema, mas fizemos teste de navegabilidade e é bem intuitivo, então resolvemos deixar como deixaríamos na vida real. :)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Assim que clicamos em "Registrar reclamação" somos redirecionados para...
 
-### `yarn eject`
+### [Solicitação de login](https://gs-2021-g6.netlify.app/login-reclamacao):
+<img src="https://i.imgur.com/QCaSsXA.jpg" width=60%/>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Queríamos forçar um fluxo para passar pelo login, e essa foi a forma que encontramos. Aqui, o usuário precisa escolher se é Pessoa Física ou jurídica. 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### [Login Pessoa Física](https://gs-2021-g6.netlify.app/login-pf) [Login Pessoa Jurídica](https://gs-2021-g6.netlify.app/login-pj):
+<img src="https://i.imgur.com/2FfAEhI.jpg" width=60% />
+<img src="https://i.imgur.com/w4zkPxF.jpg" width=60% />
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Páginas de login, simples e que requerem apenas o básico. Há uma funcionalidade interessante a ser pontuada:
+<img src="https://i.imgur.com/8c37A2Y.jpg" width=60%/>
+<img src="https://i.imgur.com/ci3grAF.jpg" width=60%/>
+Reparou que o dashboard (vamos apresentar essa tela a seguir) recupera o prefixo do email? Essa é uma funcionalidade bacana do react: o storage!
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+### [Dashboard Pessoa Física](https://gs-2021-g6.netlify.app/dashboard-pf) [Dashboard Pessoa Jurídica](https://gs-2021-g6.netlify.app/dashboard-pj)
+<img src="https://i.imgur.com/RwCUWWD.jpg" width=60%/>
+<img src="https://user-images.githubusercontent.com/79127928/142712053-f8cf6b30-c688-4420-8330-d2582c296007.png" width=60% />
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Infelizmente, devido a uma requisição feita por nós no axios, onde setamos o endereço de requisição (arquivo : src\components\ListaReclamacaoUnica\index.js:21), essa página não funciona no netlify até você ter 6 reclamações :( 
+Para ela funcionar no localhost, você precisa alterar o final da url que está na linha descrita acima para algum id de alguma reclamação que exista. Se você ainda não cadastrou nenhuma reclamação, não perca tempo! Cadastre [aqui](https://gs-2021-g6.netlify.app/nova-reclamacao), e ela será id 1! 😄
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## [Cadastrar Reclamação](https://gs-2021-g6.netlify.app/nova-reclamacao):
+<img src="https://user-images.githubusercontent.com/79127928/142712095-6ce414ca-2f7c-4a46-bab3-5b6a41ef83c7.png" width=60%/>
+- E por falar nisso, aqui está ela! A página de cadastro de informação. Super sucinta e didática, ela foi criada para que as pessoas pudessem dizer o que incomoda elas, sem gastar muito tempo. Acessível apenas pelo dashboard-pf, pois apenas os usuários fazem reclamações 
 
-### Code Splitting
+## [Listar Reclamação](https://gs-2021-g6.netlify.app/lista):
+<img src="https://user-images.githubusercontent.com/79127928/142712155-e5fe82e6-4ee9-4b9b-b32f-89af6cf1e7a5.png" width=60% />
+- Essa tela também tem uma ótima funcionalidade, que é a de filtrar por cep. Às vezes só queremos saber do que está acontecendo perto de casa, né?
+<img src="https://user-images.githubusercontent.com/79127928/142712220-b9b751bf-dbf3-4c2d-988d-c1ebe1745fd7.png" width=60% />
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+É nessa tela também que podemos deletar e alterar as reclamações:
+<img src="https://user-images.githubusercontent.com/79127928/142712236-a73a6092-bf9a-4b0d-a31a-fa5fae5627c7.png" width=60% />
 
-### Analyzing the Bundle Size
+## [Cadastro Pessoa Física](https://gs-2021-g6.netlify.app/registro-pf) e [Cadastro Pessoa Jurídica](https://gs-2021-g6.netlify.app/registro-pj):
+<img src="https://user-images.githubusercontent.com/79127928/142712258-c7d58f6c-e6d2-4f3b-9790-e9c4cad2d9bf.png" width=60% />
+<img src="https://user-images.githubusercontent.com/79127928/142712311-bf26bee9-2ba2-4d9e-b1cb-3643190c2593.png" width=60% />
+- Não precisamos de tantas informações, e esse era o objetivo do nosso projeto. Um cadastro sem perder tempo. Apenas as informações absolutamente essenciais. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+#Esperamos que gostem do nosso projeto! 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+##Equipe G6
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
