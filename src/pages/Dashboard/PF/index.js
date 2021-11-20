@@ -11,8 +11,8 @@ export default function DashBoardPF() {
     return (
         <>
             <NavBar></NavBar>
-            <Container className="mt-4 containerDashboard p-2">
-                <Row className="rowDashboard">
+            <Container className="mt-4 container-dashboard p-2">
+                <Row className="row-dashboard">
                     <Col lg={true} className="mb-2">
                         <IconesPerfil></IconesPerfil>
                     </Col>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-import { Card, Alert } from 'react-bootstrap';
+import { Card, Alert, Row, Col } from 'react-bootstrap';
 
 
 class ListaReclamacaoUnica extends Component {
@@ -10,7 +10,8 @@ class ListaReclamacaoUnica extends Component {
         this.state = {
             id: '',
             categoria: '',
-            obs: ''
+            obs: '',
+            data: ''
         }
     }
 
@@ -22,21 +23,27 @@ class ListaReclamacaoUnica extends Component {
                 this.setState({
                     id: response.data.id,
                     categoria: response.data.categoria,
-                    obs: response.data.obs
+                    obs: response.data.obs,
+                    data: response.data.data
                 })
             })
     }
     render() {
-        const { id, categoria, obs } = this.state
+        const { id, categoria, obs, data } = this.state
         return (
             <div className="cardReclamacoes p-3" style={{ overflow: "auto" }}>
                 {
                     <Card className="mb-4 w-100 text-center" key={id}>
-                        <div>
-                            <h6>{categoria}</h6>
-                        </div>
-                        <p>{obs}</p>
-                        <Alert variant="success">Em andamento</Alert>
+                        <Row className="justify-content-center">
+                            <Col>
+                                <div>
+                                    <h6>{categoria}</h6>
+                                    <p>{data}</p>
+                                </div>
+                            </Col>
+                            <p>{obs}</p>
+                            <Alert style={{ width: '30vw' }} variant="success">Em andamento</Alert>
+                        </Row>
                     </Card>
                 }
             </div>

@@ -64,7 +64,7 @@ export default function HomeComponent() {
           </Row>
         </div>
       </Container>
-      <Row className="p-5 my-5 div-incentivo justify-content-center">
+      <Row className="p-5 my-5 div-incentivo justify-content-center align-items-center">
         <h5 style={{ width: "50vw" }}>
           Cada um de nós tem o poder da transformação e juntos somos mais
           fortes! Acreditamos em uma sociedade unida e ativa na transformação

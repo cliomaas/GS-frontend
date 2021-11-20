@@ -7,7 +7,7 @@ export default function IconesPerfilPJ() {
     let nomeum = localStorage.usernamepj;
     let nome = nomeum.substring(0, nomeum.indexOf('@'))
     return (
-        <Card className="cardDashboard p-4 justify-content-around">
+        <Card className="card-dashboard p-4 justify-content-around">
             <div className="d-flex flex-column align-items-center">
                 <img src={FotoPerfil} alt="foto de perfil"></img>
                 <p>Bem vindo, {nome}</p>

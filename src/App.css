@@ -32,13 +32,14 @@ input[type="text"]{
     width: 80%;
 
 }
-.containerLoginReclamacao, .containerDashboard, .containerSobre{
+.containerLoginReclamacao, .container-dashboard, .containerSobre{
   min-height: 70vh;
 }
 
 .div-incentivo{
   height: 30vh;
   background-color: #d8e8ef;
+  color: #09366D !important;
 }
 /* .containerLista{
   min-height: 52vh
@@ -90,10 +91,14 @@ footer{
 
 }
 
+avaliacao-bairro{
+  color: black!important;
+}
+
 .row-sobre{
   overflow-y: scroll;
 }
-.cardDashboard{
+.card-dashboard{
   height: 60vh;
  padding: 52px 10px;
 }
@@ -158,6 +163,13 @@ border-radius: 0px;
 box-shadow: inset 0px 0px 0px 0px #F0F0F0;
 }
 
+h1, h2, h4, h6{
+  color: #C74A42 !important;
+}
+h3{
+  color: #09366D!important;
+}
+
 @media (min-width: 1400px){
   .menina{
    height: 70%;
@@ -169,8 +181,8 @@ box-shadow: inset 0px 0px 0px 0px #F0F0F0;
     display: block;
   }
   .botoesDash{
-width: 34vw;
-}
+    width: 34vw;
+  }
 .row-sobre{
   overflow: hidden;
 }

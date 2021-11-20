@@ -24,11 +24,9 @@ class AlteraReclamacao extends Component {
     }
 
     handleSubmit = (e) => {
-        e.preventDefault()
         axios.put('http://localhost:8080/api/reclamacoes', this.state)
             .then(response => {
                 console.log(response)
-                this.props.navigate('/lista')
             })
     }
 

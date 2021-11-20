@@ -3,10 +3,10 @@ import Estrela from "../../assets/img/estrela.svg"
 
 export default function CardStatusBairro() {
     return (
-        <Card className="d-flex align-items-center cardDashboard justify-content-around">
+        <Card className="d-flex align-items-center card-dashboard justify-content-around">
             <Card.Title>Avaliação do bairro</Card.Title>
             <div>
-                <div className="d-flex flex-row">
+                <div className="d-flex flex-row justify-content-between">
                     <img src={Estrela} alt="estrela de avaliacao"></img>
                     <div className="d-flex flex-column">
                         <h5>Ótimo</h5>

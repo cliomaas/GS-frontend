@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Container, Form, FormControl, FormGroup, FormLabel, FormSelect, Button, Row } from "react-bootstrap";
 import withRouter from "../../HOC";
+
 class Reclamacao extends Component {
     constructor(props) {
         super(props);
@@ -22,7 +23,6 @@ class Reclamacao extends Component {
     }
 
 
-
     handleSubmit = (e) => {
         e.preventDefault();
         axios.post('http://localhost:8080/api/reclamacoes', this.state)
@@ -40,7 +40,7 @@ class Reclamacao extends Component {
             <Container className="my-5">
                 <Row>
                     <Form onSubmit={this.handleSubmit}>
-                        <h1>Cadastro de nova reclamacao</h1>
+                        <h1>Cadastro de nova reclamação</h1>
                         <p>Preencha o formulário abaixo para a realização de nova reclamação</p>
                         <FormGroup>
                             <div>
