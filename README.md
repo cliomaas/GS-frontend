@@ -16,7 +16,7 @@ Para esse projeto, utilizamos ReactJS, e [react-bootstrap](https://react-bootstr
 
 O projeto é integrado com o backend ([Springboot](https://spring.io/projects/spring-boot)), e a intenção inicial era utilizar o heroku como hospedagem de backend, porém por problemas técnicos não conseguimos efetivar essa integração. Por isso, sugerimos que se clone o projeto de backend, e faça o mesmo rodar no localhost:8080, pois a experiência é muito mais interessante quando se manipula os dados de verdade :) 
 
-(Link do repositório de backend) 
+[Link do repositório de backend](https://github.com/cliomaas/backend-gs) 
 
 ## As telas:
 
